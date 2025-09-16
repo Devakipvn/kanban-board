@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Dynamic Kanban Board</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Dynamic Kanban Board</h1>
+      <form id="task-form" class="task-form" aria-label="Create task">
+        <input id="title" placeholder="Task title" required maxlength="100" />
+        <input id="desc" placeholder="Short description" />
+        <select id="status">
+          <option value="todo">To Do</option>
+          <option value="inprogress">In Progress</option>
+          <option value="done">Done</option>
+        </select>
+        <button type="submit" id="add-btn">Add</button>
+      </form>
+    </header>
+
+    <section class="board" id="board">
+      <div class="column" data-status="todo">
+        <h2>To Do</h2>
+        <div class="task-list" id="todo-list"></div>
+      </div>
+      <div class="column" data-status="inprogress">
+        <h2>In Progress</h2>
+        <div class="task-list" id="inprogress-list"></div>
+      </div>
+      <div class="column" data-status="done">
+        <h2>Done</h2>
+        <div class="task-list" id="done-list"></div>
+      </div>
+    </section>
+
+    <footer>
+      <small>Drag & drop tasks between columns. Data persists using <code>localStorage</code>.</small>
+    </footer>
+  </main>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
