@@ -62,7 +62,7 @@ kanban-board/
 
 ## 🎥 Demo
 
-🔗 **Live Demo:** [\[Your Deployed Link Here]](https://devakipvn.github.io/kanban-board/)
+🔗 **Live Demo:** https://devakipvn.github.io/kanban-board/
 
 ---
 
